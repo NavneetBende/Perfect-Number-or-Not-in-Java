@@ -1,0 +1,30 @@
+class Main
+{
+    public static void main (String[]args)
+    {
+        int num = 28;
+
+        if (isPerfect(num))
+            System.out.println (num + " Is a perfect number");
+        else
+            System.out.println (num + " Is not a perfect number");
+
+    }
+
+    private static boolean isPerfect(int num) {
+        int sum = 0;
+        
+        // all divisors of num(excluding itself) can be found before num/2
+        // remember put = sign as for even numbers like 28
+        // half of it i.e. 14 would be divisor too e
+        for (int i = 1; i <= num/2; i++){
+            if (num % i == 0)
+                sum = sum + i;
+        }
+
+        if (sum == num)
+            return true;
+
+        return false;
+    }
+}
