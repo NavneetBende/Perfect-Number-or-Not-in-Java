@@ -1,0 +1,23 @@
+class Main
+{
+    public static void main (String[]args)
+    {
+
+        int num = 28, sum = 0, i = 1;
+
+        // iteratively check for all numbers if they are divisors
+        while(i < num)
+        {
+            // check if i is a divisor, if yes then add to sum
+            if(num % i == 0)
+                sum = sum + i;
+            i++;
+        }
+
+        if (sum == num)
+            System.out.println (num + " Is a perfect number");
+        else
+            System.out.println (num + " Is not a perfect number");
+
+    }
+}
